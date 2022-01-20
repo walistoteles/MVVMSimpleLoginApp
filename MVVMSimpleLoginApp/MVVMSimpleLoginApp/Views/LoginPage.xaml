@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMSimpleLoginApp.Views.LoginPage"
+             xmlns:local="clr-namespace:MVVMSimpleLoginApp.ViewModels">
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="10">
+
+            <Frame BorderColor="Black">
+                <StackLayout VerticalOptions="CenterAndExpand">
+                    <Entry Placeholder="Username" Text="{Binding UserName}"/>
+                    <Entry Placeholder="Password" IsPassword="True" Text="{Binding Password}"/>
+                    <Button Text="Login" Command="{Binding LoginCommand}"/>
+                    <Button Text="Register" Command="{Binding RegisterCommand}"/>
+                </StackLayout>
+            </Frame>
+         
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
